@@ -31,8 +31,21 @@
             </ListView.ItemTemplate>
         </ListView>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1">
-            <Button Name="AddBtn" Grid.Row="1" HorizontalAlignment="Center" Width="150" Height="40" Margin="10,5" Content="Добавить"  Background="#ffd073" Click="AddBtn_Click"/>
-            <Button Content="Удалить" Width="150" Height="40" Margin="10,5" Background="#ffd073" Click="Del_Click"/>
+            <Button Name="AddBtn" Grid.Row="1" HorizontalAlignment="Center" Width="150" Height="40" Margin="10,5" Content="Добавить"  Background="#ffd073" Click="AddBtn_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Content="Удалить" Width="150" Height="40" Margin="10,5" Background="#ffd073" Click="Del_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
         </StackPanel>
     </Grid>
 </Page>

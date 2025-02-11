@@ -21,7 +21,7 @@
 
         <StackPanel Orientation="Vertical"  Grid.Column="0" Background="#1240ab"  >
             
-            <Image Source="/PracticSchool;component/school.png"  HorizontalAlignment="Center" Width="65" Margin="5,10"/>
+            <Image Source="school12.png"  HorizontalAlignment="Center" Width="90" />
 
             <TextBlock Text="Выберите таблицу:" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="14" Grid.Row="1" Margin="10,0" Foreground="#ffffff"/>
 
