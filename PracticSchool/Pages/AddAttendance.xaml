@@ -1,0 +1,46 @@
+﻿<Page x:Class="PracticSchool.Pages.AddAttendance"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PracticSchool.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddAttendance" Background="#FFFFFF">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Имя ученика" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Center" FontSize="15"/>
+                <ComboBox x:Name="StudentsLV" SelectedItem="{Binding Students}" DisplayMemberPath="Name" Margin="5,5" Grid.Column="1" Grid.Row="0"/>
+
+                <TextBlock Text="Фамилия ученика" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Center" FontSize="15"/>
+                <ComboBox x:Name="StudentsLV1" SelectedItem="{Binding Students}" DisplayMemberPath="Surname" Margin="5,5" Grid.Column="1" Grid.Row="1"/>
+
+                <TextBlock Text="Кабинет ученика" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Center" FontSize="15"/>
+                <ComboBox x:Name="ClassesLV" SelectedItem="{Binding Classes}" DisplayMemberPath="ClassName" Margin="5,5" Grid.Column="1" Grid.Row="2"/>
+
+                <TextBlock Text="Посещаемость на уроках" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Center" FontSize="15"/>
+                <TextBox Text="{Binding Visiting}" Margin="5,5" Grid.Column="1" Grid.Row="3"/>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="5" Grid.Column="1">
+                    <Button x:Name="SaveBtn" Width="120" Height="40" Margin="10" Content="Сохранить" Background="#ffd073" Click="SaveBtn_Click"/>
+                    <Button x:Name="BackBtn" Width="120" Height="40" Margin="10" Content="Назад" Background="#ffd073" Click="BackBtn_Click"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>
